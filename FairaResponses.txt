@@ -1,0 +1,58 @@
+Question #24:
+
+- OG Example: (only 1 rec in this doc all worked though.)
+    Member ID           Skill ID
+reccCkytUxSlClXfq	recFoEk8DWDTAoz10
+
+- August 7th JSON:
+
+---------
+
+Question #25:
+- OG Example: 
+    It appears there was an error retrieving the database information. Let me try to get the relevant data again............................................It appears there was an error retrieving the data regarding Grace Johnson's subordinates. To resolve this, I will attempt another query.
+    Please hold on a moment.............................................................I was unable to retrieve the data directly from the database to determine who Grace Johnson is the direct supervisor for.
+    Would you like to search for relevant documents or specify how to retrieve data?
+
+- August 7th JSON:
+
+---------
+
+Question #26:
+- OG Example:
+    It appears there was an error retrieving the data regarding the current commander. Let me attempt another retrieval.
+    Would you like to search for relevant documents to find this information?
+
+- August 7th JSON:
+
+----------
+
+Question #27: 
+
+- OG Example:  (only 3 are rec in this doc all worked though.)
+            Squadron:                    Supervisor:
+    932nd Maintenance Squadron	        Christopher Davis
+    932nd Aerospace Medicine Squadron	Henry Johnson
+    73rd Airlift Squadron	            Grace Johnson
+
+- August 7th JSON:
+
+----------
+
+Question #28:
+
+- OG Example:
+    It appears that there was an error retrieving the data regarding Henry Miller's supervisor. Let me try to fetch the relevant information again. Please hold on a moment.
+    If you have any other questions or need assistance with something else in the meantime, feel free to let me know!
+
+- August 7th JSON:
+
+----------
+
+Question #29:
+
+- OG Example:
+    It seems there have been multiple errors when trying to retrieve data regarding the skills of Ethan Wilson. Unfortunately, I'm unable to provide the information directly from the database at this moment.
+    Would you like to search for relevant documents to find this information, or specify any additional data sources that might assist in retrieving the required information?
+
+- August 7th JSON:
