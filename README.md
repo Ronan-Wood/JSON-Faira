@@ -12,5 +12,5 @@
  Think of it as if you were trying to throw a ball into a basket. if it is a small basket then it is hard to throw the ball in. If it is a bigger basket it is easier to throw a ball in.
 
  ### Changes
- # - August 7th, 2024, 1:52 PM: Completly redid the decriptions of everything so that they are more detailed in every way, have more clearly definded relationships with one another and are wider so that it is easier for the chatbot to use and understand the information.
+  - August 7th, 2024, 1:52 PM: Completly redid the decriptions of everything so that they are more detailed in every way, have more clearly definded relationships with one another and are wider so that it is easier for the chatbot to use and understand the information.
 
