@@ -1,0 +1,35 @@
+{
+    "tableName": "RifleTraining",
+    "tableDescription": "Contains comprehensive information regarding the rifle training programs undertaken by members, including training completion dates, certification status, and member associations.",
+    "columns": [
+        {
+            "columnName": "rifletraining_id",
+            "columnDescription": "Unique identifier assigned to each rifle training entry, serving as a precise code or reference number to ensure accurate tracking and effective management of training records specific to rifle proficiency."
+        },
+        {
+            "columnName": "member",
+            "columnDescription": "Full name of the member participating in the rifle training program, providing clear identification of the individual undergoing training and facilitating accurate record-keeping and personalized tracking of their training progress."
+        },
+        {
+            "columnName": "completedDate",
+            "columnDescription": "Date on which the member successfully completed their rifle training, marking the official conclusion of the training session and serving as a reference point for tracking the member's training history and compliance with mandatory training requirements."
+        },
+        {
+            "columnName": "expirationDate",
+            "columnDescription": "Expiration date of the rifle training certification, indicating the date on which the member's certification becomes invalid, thus necessitating renewal or requalification to maintain adherence to training standards and protocols."
+        },
+        {
+            "columnName": "status",
+            "columnDescription": "Current status of the rifle training entry, reflecting the training's progress and overall completion level, with potential values including Complete, Incomplete, or other relevant designations to provide insight into the member's training record."
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "Foreign Key Reference linking to the Members table, specifically referencing the members_id field, which establishes a connection between the rifle training records and the specific member responsible for completing the training. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index used for tracking updates to rifle training entries, enabling systematic recording and monitoring of any changes or revisions made to the training records, ensuring accurate and up-to-date information."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

@@ -1,0 +1,51 @@
+{
+    "tableName": "AircraftEquipment",
+    "tableDescription": "This table provides comprehensive details about aircraft equipment, including its model, manufacturer, and serial number. It also includes information on the acquisition date, current condition, last maintenance date, and the scheduled next maintenance date. These details ensure a thorough understanding of the aircraft equipment's history, status, and maintenance schedule.",
+    "columns": [
+        {
+            "columnName": "aircraftequipment_id",
+            "columnDescription": "A unique identifier for the aircraft equipment, ensuring precise tracking and identification within maintenance records, operational logs, and documentation."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "The official name of the aircraft equipment, used for identification and reference."
+        },
+        {
+            "columnName": "description",
+            "columnDescription": "A brief description of the aircraft equipment, summarizing its key features and functions."
+        },
+        {
+            "columnName": "model",
+            "columnDescription": "The model of the aircraft equipment, detailing the specific version or type within its series."
+        },
+        {
+            "columnName": "manufacturer",
+            "columnDescription": "The manufacturer of the aircraft equipment, identifying the company or entity responsible for its production."
+        },
+        {
+            "columnName": "serialNumber",
+            "columnDescription": "The serial number of the aircraft equipment, serving as a unique identifier assigned by the manufacturer for tracking and verification purposes."
+        },
+        {
+            "columnName": "acquisitionDate",
+            "columnDescription": "The date when the aircraft equipment was acquired, indicating when it was obtained or put into service."
+        },
+        {
+            "columnName": "condition",
+            "columnDescription": "The current condition of the aircraft equipment, categorized into: Good, Fair, New, Poor, and Unknown. These categories help indicate the equipment’s operational state and overall quality."
+        },
+        {
+            "columnName": "lastMaintenanceDate",
+            "columnDescription": "The date of the last maintenance performed on the aircraft equipment, providing a reference point for its most recent service or inspection."
+        },
+        {
+            "columnName": "nextMaintenanceDate",
+            "columnDescription": "The scheduled date for the next maintenance of the aircraft equipment, indicating when the upcoming service or inspection is planned to occur."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates to the aircraft equipment information, allowing for the systematic recording and monitoring of changes or revisions."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

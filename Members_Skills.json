@@ -1,0 +1,17 @@
+{
+    "tableName": "Members_Skills",
+    "tableDescription": "A junction table that establishes a many-to-many relationship between members and their associated skills.",
+    "columns": [
+        {
+            "columnName": "members_id",
+            "columnDescription": "Foreign key reference to the Members table, specifically linking to the Members_id field. This column accurately identifies and associates the member with their corresponding skills. (Foreign Key to Members.Members_id, ID of the member)",
+            "isPrimaryKey": true
+        },
+        {
+            "columnName": "skills_id",
+            "columnDescription": "Foreign key reference to the Skills table, specifically linking to the Skills_id field. This column accurately identifies and associates the skill with the corresponding member entry. (Foreign Key to Skills.Skills_id, ID of the skill)",
+            "isPrimaryKey": true
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

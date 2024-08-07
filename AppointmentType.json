@@ -1,0 +1,23 @@
+{
+    "tableName": "AppointmentType",
+    "tableDescription": "This table provides detailed information about appointment types, outlining the various kinds of appointments that an airman might need to schedule. It includes data necessary for organizing and managing these appointments effectively.",
+    "columns": [
+        {
+            "columnName": "appointmenttype_id",
+            "columnDescription": "A unique identifier for each appointment type. This distinct code or reference number is used to categorize, track, and manage different types of appointments within the system."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "The name assigned to the appointment type. This label helps in identifying and distinguishing between various categories of appointments, facilitating easy reference and organization."
+        },
+        {
+            "columnName": "durationMinutes",
+            "columnDescription": "The duration of the appointment expressed in minutes. This field specifies the total time allocated for the appointment or session, helping to manage and schedule appointments effectively."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index used for tracking updates to the appointment type information. This index aids in systematically recording and monitoring any changes or revisions made to the appointment details."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

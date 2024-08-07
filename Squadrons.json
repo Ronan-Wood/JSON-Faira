@@ -1,0 +1,35 @@
+{
+    "tableName": "Squadrons",
+    "tableDescription": "Contains comprehensive information about squadrons within the organization, detailing their operational structure and status.",
+    "columns": [
+        {
+            "columnName": "squadrons_id",
+            "columnDescription": "Unique identifier for each squadron, ensuring precise tracking and management of squadron records within the system to facilitate efficient data retrieval and reporting."
+        },
+        {
+            "columnName": "squadron",
+            "columnDescription": "Name of the squadron, providing a distinct designation that identifies the unit within the larger organization, essential for administrative and operational purposes."
+        },
+        {
+            "columnName": "supervisorName",
+            "columnDescription": "Name of the squadron's supervisor, indicating the individual responsible for overseeing the squadron's operations and personnel, essential for accountability and effective management within the unit."
+        },
+        {
+            "columnName": "squadronReadinessStatus",
+            "columnDescription": "Readiness status of the squadron, indicating the overall operational readiness level represented by color codes (Red, Yellow, Green), calculated based on the readiness score derived from the completion status of requirements for all personnel within the squadron, providing a quick assessment of the squadron's preparedness for missions."
+        },
+        {
+            "columnName": "imageUrl",
+            "columnDescription": "URL to the squadron's image, providing a direct link to a visual representation of the squadron, which can be utilized for identification, promotional materials, or organizational representation within various platforms or documentation."
+        },
+        {
+            "columnName": "groups_Fk",
+            "columnDescription": "Foreign Key reference to Groups, establishing a link to the groups_id field in the Groups table, allowing for the association of each squadron with the specific group it belongs to, ensuring accurate representation of hierarchical relationships within the organization. (ref: Groups.groups_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index of the last update, facilitating the tracking and documentation of the most recent modifications made to the squadron entry, ensuring that the information remains current and easily accessible for review and auditing purposes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

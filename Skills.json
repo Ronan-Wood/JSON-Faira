@@ -1,0 +1,27 @@
+{
+    "tableName": "Skills",
+    "tableDescription": "Contains comprehensive information about skills necessary for various roles within the organization",
+    "columns": [
+        {
+            "columnName": "skills_id",
+            "columnDescription": "Unique identifier for each skill entry, serving as a distinct reference number to ensure accurate tracking and effective management of skill records throughout the system."
+        },
+        {
+            "columnName": "skill",
+            "columnDescription": "Name of the skill, providing a clear identification of the specific expertise or competency required for a member's role, including examples such as Aerospace Engineer, Aircraft Mechanic, or Air Traffic Controller, to facilitate skill matching and training needs assessment."
+        },
+        {
+            "columnName": "source",
+            "columnDescription": "Source of the skill, indicating the origin of the skill acquisition, whether obtained through civilian training programs or military training, offering essential context for the member's qualifications, expertise, and applicable experiences."
+        },
+        {
+            "columnName": "type",
+            "columnDescription": "Type of credential or training associated with the skill, specifying the nature of the qualification received by the member, including distinctions such as Certification, Education, Letter of Designation, License, or Training, clarifying the level and formality of the skill acquisition to aid in competency evaluations."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates, enabling systematic documentation and monitoring of any changes or revisions made to skill entries, ensuring accurate recording of all modifications to skill information and facilitating easy retrieval for reference and auditing purposes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

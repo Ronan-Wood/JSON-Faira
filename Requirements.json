@@ -1,0 +1,35 @@
+{
+    "tableName": "Requirements",
+    "tableDescription": "Contains information about requirements",
+    "columns": [
+        {
+            "columnName": "requirements_id",
+            "columnDescription": "Unique identifier for each requirement, enabling precise tracking and management of requirement records. This ensures each entry can be distinctly referenced for efficient data retrieval and integrity across related tables."
+        },
+        {
+            "columnName": "requirements",
+            "columnDescription": "Name of the requirement for a person, providing a clear and descriptive label that identifies the specific training, certification, or task that must be completed."
+        },
+        {
+            "columnName": "status",
+            "columnDescription": "Current status of the requirement, indicating whether it is COMPLETE, INCOMPLETE, or in another relevant state. This helps track the progress of compliance."
+        },
+        {
+            "columnName": "isbooked",
+            "columnDescription": "Indicates whether the requirement is booked, represented as a boolean value (true/false) to indicate if the requirement has been scheduled or reserved."
+        },
+        {
+            "columnName": "appointmenttype_Fk",
+            "columnDescription": "Foreign key reference to Appointment Type, linking to the appointmenttype_id field in the Appointmenttype table. This establishes a relationship that identifies the specific type of appointment associated with the requirement. (ref: Appointmenttype.appointmenttype_id)"
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "Foreign key reference to Members, linking to the members_id field in the Members table. This establishes a relationship that associates each requirement with the corresponding member responsible for fulfilling it. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates, allowing for the systematic recording and monitoring of any changes or revisions made to the requirement entries, ensuring accurate and up-to-date information."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

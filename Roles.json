@@ -1,0 +1,23 @@
+{
+    "tableName": "Roles",
+    "tableDescription": "Contains detailed information about the various roles assigned within the organization, outlining their specific titles, responsibilities, and access levels.",
+    "columns": [
+        {
+            "columnName": "roles_id",
+            "columnDescription": "Unique identifier for each role entry, providing a distinct reference number that ensures precise tracking, management, and retrieval of role records within the system."
+        },
+        {
+            "columnName": "roleTitle",
+            "columnDescription": "Title of the role, denoting the specific designation or function assigned to a member, such as Airman, Commander, Health Provider, Training Provider, or Supervisor, thereby clarifying the member's responsibilities and position within the organizational hierarchy."
+        },
+        {
+            "columnName": "roleDescription",
+            "columnDescription": "Comprehensive description of the role's permissions and responsibilities, outlining the specific actions and access levels associated with the role, including visibility over appointments and records, oversight of health-related or training-related appointments, and the extent of access to unit records, thereby ensuring clarity on the scope of authority and accountability linked to the role."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates, facilitating systematic documentation and monitoring of any changes or revisions made to role entries, ensuring that all updates to the role information are accurately recorded, easily retrievable, and maintainable for auditing and review purposes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

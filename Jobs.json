@@ -1,0 +1,27 @@
+{
+    "tableName": "Jobs",
+    "tableDescription": "This table contains detailed information about job positions, including their unique identifiers, titles, responsibilities, and associated squadrons. It is designed to facilitate the management and tracking of job roles within the organization.",
+    "columns": [
+        {
+            "columnName": "jobs_id",
+            "columnDescription": "A unique identifier for each job entry, serving as a distinct code or reference number for precise tracking and management of job records."
+        },
+        {
+            "columnName": "jobTitle",
+            "columnDescription": "The title of the job, providing a clear and concise label for identifying and differentiating between various job positions or roles."
+        },
+        {
+            "columnName": "description",
+            "columnDescription": "A detailed description of the job's responsibilities and duties, outlining the specific tasks, functions, and roles associated with the position. This provides a comprehensive overview of the expectations for the job holder."
+        },
+        {
+            "columnName": "squadrons_Fk",
+            "columnDescription": "A foreign key reference to the Squadrons table, specifically linking to the `squadrons_id` field. This column associates each job entry with a corresponding squadron, ensuring relational integrity between job records and squadron details. (ref: Squadrons.squadrons_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates related to job entries, facilitating the systematic recording and monitoring of any changes or revisions made to the job records."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

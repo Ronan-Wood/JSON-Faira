@@ -1,0 +1,99 @@
+{
+    "tableName": "Members",
+    "tableDescription": "Contains comprehensive information about members, ensuring effective management and tracking of member records.",
+    "columns": [
+        {
+            "columnName": "members_id",
+            "columnDescription": "Unique identifier for each member, facilitating precise tracking and management of records while ensuring data integrity across related tables."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "Full name of the member, providing clear identification and facilitating effective communication across various contexts."
+        },
+        {
+            "columnName": "dodid",
+            "columnDescription": "Department of Defense Identification Number (DOD ID), serving as a unique identifier for official identification and record-keeping within the Department of Defense."
+        },
+        {
+            "columnName": "homePhone",
+            "columnDescription": "Home phone number, enabling direct communication with the member outside official channels."
+        },
+        {
+            "columnName": "ssn",
+            "columnDescription": "Social Security Number, uniquely identifying the member for administrative purposes and tracking benefits."
+        },
+        {
+            "columnName": "dateOfBirth",
+            "columnDescription": "Date of birth formatted as MM/DD/YYYY, used for age verification and eligibility assessments."
+        },
+        {
+            "columnName": "dateArrivedAtStation",
+            "columnDescription": "Date the member arrived at their current duty station, formatted as MM/DD/YYYY, used for tracking service duration."
+        },
+        {
+            "columnName": "age",
+            "columnDescription": "Calculated age of the member, providing a quick reference for age-related eligibility."
+        },
+        {
+            "columnName": "personalEmail",
+            "columnDescription": "Personal email address for direct contact outside official channels."
+        },
+        {
+            "columnName": "militaryEmail",
+            "columnDescription": "Official military email address for secure communications."
+        },
+        {
+            "columnName": "homeAddress",
+            "columnDescription": "Residential address for correspondence and administrative purposes."
+        },
+        {
+            "columnName": "gender",
+            "columnDescription": "Classification of the member's gender identity for demographic records."
+        },
+        {
+            "columnName": "personalTagline",
+            "columnDescription": "A brief phrase reflecting the member's personal philosophy or outlook."
+        },
+        {
+            "columnName": "jobtitle",
+            "columnDescription": "Official job title indicating the member's position within the organization."
+        },
+        {
+            "columnName": "awsS3Link",
+            "columnDescription": "Direct URL to the member's profile image hosted on Amazon S3 for easy access."
+        },
+        {
+            "columnName": "completeGlideMemberUrl",
+            "columnDescription": "Direct link to the member's profile on Glide for quick access to detailed information."
+        },
+        {
+            "columnName": "readinessScore",
+            "columnDescription": "Readiness score from 0 to 100, indicating the member's overall readiness based on completed and incomplete requirements."
+        },
+        {
+            "columnName": "hasconflict",
+            "columnDescription": "Indicates scheduling conflicts, represented as 0 for no conflict and 1 for conflict."
+        },
+        {
+            "columnName": "roles_Fk",
+            "columnDescription": "Foreign key reference to the Roles table, linking to the roles_id field to associate the member with their role. (ref: Roles.roles_id)"
+        },
+        {
+            "columnName": "jobs_Fk",
+            "columnDescription": "Foreign key reference to the Jobs table, linking to the jobs_id field to associate the member with their job. (ref: Jobs.jobs_id)"
+        },
+        {
+            "columnName": "groups_Fk",
+            "columnDescription": "Foreign key reference to the Groups table, linking to the groups_id field to associate the member with their group. (ref: Groups.groups_id)"
+        },
+        {
+            "columnName": "squadrons_Fk",
+            "columnDescription": "Foreign key reference to the Squadrons table, linking to the squadrons_id field to accurately associate the member with their squadron. (ref: Squadrons.squadrons_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates related to member entries, allowing for systematic recording and monitoring of any changes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

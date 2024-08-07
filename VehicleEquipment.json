@@ -1,0 +1,51 @@
+{
+    "tableName": "VehicleEquipment",
+    "tableDescription": "Contains information about vehicle equipment",
+    "columns": [
+        {
+            "columnName": "vehicleequipment_id",
+            "columnDescription": "Unique identifier for each piece of vehicle equipment, ensuring precise tracking and management of records within the system, allowing for easy reference and retrieval of specific equipment information."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "Name of the vehicle equipment, providing a clear and specific identification of the equipment type, which is essential for understanding its function and purpose within the operational context."
+        },
+        {
+            "columnName": "description",
+            "columnDescription": "Detailed description of the equipment, offering comprehensive information about its features, specifications, capabilities, and intended use, ensuring that users have a thorough understanding of the equipment's operational characteristics and benefits."
+        },
+        {
+            "columnName": "model",
+            "columnDescription": "Model of the equipment, specifying the exact designation or version of the vehicle equipment, which is essential for identification, compatibility, and reference in maintenance and operational contexts."
+        },
+        {
+            "columnName": "manufacturer",
+            "columnDescription": "Manufacturer of the equipment, indicating the company or entity responsible for producing the vehicle equipment, providing crucial information for sourcing, support, and warranty considerations."
+        },
+        {
+            "columnName": "serialnumber",
+            "columnDescription": "Serial number of the equipment, serving as a unique identifier assigned by the manufacturer to distinguish this specific unit from others, facilitating tracking, inventory management, and maintenance records."
+        },
+        {
+            "columnName": "acquisitionDate",
+            "columnDescription": "Date of acquisition of the equipment, marking when the equipment was obtained and added to the inventory, important for tracking the equipment's lifecycle and managing warranty periods."
+        },
+        {
+            "columnName": "condition",
+            "columnDescription": "Current condition of the equipment, indicating its operational status and usability, which may include categories such as New, Good, Fair, or Needs Repair, providing essential information for maintenance scheduling and asset management."
+        },
+        {
+            "columnName": "lastMaintenanceDate",
+            "columnDescription": "Date of the last maintenance, marking the most recent inspection or service performed on the equipment, which is crucial for tracking maintenance history and ensuring optimal performance and safety standards are met."
+        },
+        {
+            "columnName": "nextMaintenanceDate",
+            "columnDescription": "Date of the next scheduled maintenance, indicating the planned date for the upcoming inspection or service of the equipment, essential for proactive maintenance management and ensuring the equipment remains operational and in compliance with safety regulations."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index of the last update, facilitating the tracking and documentation of the most recent modifications made to the vehicle equipment entry, ensuring that the information is current and easily accessible for review and auditing purposes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

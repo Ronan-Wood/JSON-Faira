@@ -1,0 +1,47 @@
+{
+    "tableName": "Slots",
+    "tableDescription": "Contains information about available slots for appointments, detailing scheduling, capacity, and booking status.",
+    "columns": [
+        {
+            "columnName": "slots_id",
+            "columnDescription": "Unique identifier for each slot, ensuring precise tracking and management of slot records, facilitating clear referencing and retrieval of each entry within the system."
+        },
+        {
+            "columnName": "slotId",
+            "columnDescription": "Primary key in Airtable, serving as the main unique identifier for each slot entry, guaranteeing that each record can be distinctly referenced and accessed within the database without ambiguity."
+        },
+        {
+            "columnName": "startTime",
+            "columnDescription": "Start time of the slot, indicating the scheduled beginning of the time slot, providing a clear reference point for when the appointment or activity is set to commence, aiding in effective scheduling."
+        },
+        {
+            "columnName": "endTime",
+            "columnDescription": "End time of the slot, indicating the scheduled conclusion of the time slot, offering a precise reference for when the appointment or activity is expected to finish, allowing for better time management."
+        },
+        {
+            "columnName": "slotcapacity",
+            "columnDescription": "Maximum capacity for the slot, specifying the total number of individuals permitted to book this time slot, ensuring effective management of available resources and preventing overbooking, thereby maintaining operational efficiency."
+        },
+        {
+            "columnName": "slotused",
+            "columnDescription": "Current occupancy of the slot, indicating the total number of individuals who have successfully booked this time slot, providing insight into availability and demand for the scheduled resource, which aids in future planning."
+        },
+        {
+            "columnName": "isbooked",
+            "columnDescription": "Booking status of the slot, represented as a binary value where 1 indicates that the slot is currently booked and 0 signifies availability for booking, allowing for quick assessment of slot occupancy and facilitating efficient scheduling."
+        },
+        {
+            "columnName": "appointmenttype_Fk",
+            "columnDescription": "Foreign Key reference to Appointment Type, establishing a link to the appointmenttype_id field in the Appointmenttype table, allowing for the association of each slot with the specific type of appointment it accommodates, ensuring clarity in scheduling. (ref: Appointmenttype.appointmenttype_id)"
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "Foreign Key reference to Members, linking to the members_id field in the Members table, establishing a relationship that associates each slot with the specific member who has booked it or is eligible to book it, ensuring accountability and traceability. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates, enabling the systematic documentation and monitoring of any changes or modifications made to slot entries, ensuring that all updates to the slot information are accurately recorded and easily retrievable for reference and auditing purposes."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

@@ -1,0 +1,31 @@
+{
+    "tableName": "Groups",
+    "tableDescription": "This table contains detailed information about groups, including their unique identifiers, names, supervisors, readiness status, and associated images. It is designed to facilitate the management and tracking of group-related data within the system.",
+    "columns": [
+        {
+            "columnName": "groups_id",
+            "columnDescription": "A unique identifier for each group entry, serving as a distinct code or reference number for precise tracking and management of group records."
+        },
+        {
+            "columnName": "group",
+            "columnDescription": "The name of the group, providing a clear label for identifying and differentiating between various groups within the system."
+        },
+        {
+            "columnName": "supervisorName",
+            "columnDescription": "The name of the group's supervisor, identifying the individual responsible for overseeing and managing the group’s activities."
+        },
+        {
+            "columnName": "groupReadinessStatus",
+            "columnDescription": "The readiness status of the group, categorized into options such as Green, Red, Yellow, or other relevant statuses. This classification reflects the group's current state of preparedness and operational capability based on the completion score of their requirements."
+        },
+        {
+            "columnName": "imageUrl",
+            "columnDescription": "The URL of the group's image, providing a link to an image associated with the group for visual identification and reference."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates related to the group entries, facilitating the systematic recording and monitoring of any changes or revisions made to the group information."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

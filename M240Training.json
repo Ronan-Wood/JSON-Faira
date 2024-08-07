@@ -1,0 +1,35 @@
+{
+    "tableName": "M240Training",
+    "tableDescription": "This table contains comprehensive information about M240 training sessions, including details about the member undergoing training, completion dates, certification expiration dates, current status, and associated updates. It is designed to effectively manage and track M240 training records within the system.",
+    "columns": [
+        {
+            "columnName": "m240Training_id",
+            "columnDescription": "Contains the unique identifier for each M240 training entry, serving as a distinct code or reference number to ensure precise tracking and management of training records."
+        },
+        {
+            "columnName": "member",
+            "columnDescription": "Specifies the name of the member undergoing M240 training, providing clear identification of the individual associated with the training record."
+        },
+        {
+            "columnName": "completedDate",
+            "columnDescription": "Records the date on which the M240 training was completed, marking the official end date of the training session for the member."
+        },
+        {
+            "columnName": "expirationDate",
+            "columnDescription": "Specifies the expiration date of the M240 training certification, indicating when the member's certification will no longer be valid and will require renewal."
+        },
+        {
+            "columnName": "status",
+            "columnDescription": "Indicates the current status of the M240 training, with options such as Complete, Incomplete, or other relevant statuses. Provides insight into the training's current progress and overall completion level."
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "Contains a foreign key reference to the Members table, specifically linking to the `members_id` field. Associates each M240 training entry with a corresponding member, ensuring relational integrity between training records and member details. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Includes an index for tracking updates related to the M240 training entries, allowing for the systematic recording and monitoring of any changes or revisions made to the training records."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

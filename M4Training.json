@@ -1,0 +1,35 @@
+{
+    "tableName": "M4Training",
+    "tableDescription": "This table contains comprehensive information about M4 training sessions, including details about the member undergoing training, completion dates, certification expiration, current status, and associated updates. It is designed to effectively manage and track M4 training records within the system.",
+    "columns": [
+        {
+            "columnName": "m4Training_id",
+            "columnDescription": "A unique identifier for each M4 training entry. This distinct code or reference number ensures precise tracking and management of individual training records."
+        },
+        {
+            "columnName": "member",
+            "columnDescription": "The name of the member undergoing M4 training. This column provides clear identification of the individual associated with the training record, ensuring accurate record-keeping."
+        },
+        {
+            "columnName": "completedDate",
+            "columnDescription": "The date on which the M4 training was completed, marking the official end of the training session for the member. This helps in tracking the training timeline."
+        },
+        {
+            "columnName": "expirationDate",
+            "columnDescription": "The date when the M4 training certification expires, indicating the deadline for the member to renew their certification to maintain valid training status."
+        },
+        {
+            "columnName": "status",
+            "columnDescription": "The current status of the M4 training, with predefined options such as Complete, Incomplete, and other relevant statuses. This provides insight into the training's progress and completion level."
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "A foreign key reference to the Members table, specifically linking to the `members_id` field. This association ensures relational integrity by linking each M4 training entry to the corresponding member. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates related to the M4 training entries. This column allows for the systematic recording and monitoring of any changes or revisions made to the training records, ensuring up-to-date information."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

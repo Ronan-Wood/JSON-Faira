@@ -1,0 +1,51 @@
+{
+    "tableName": "MaintenanceEquipment",
+    "tableDescription": "This table contains detailed information about maintenance equipment, including identifiers, specifications, acquisition details, condition, and maintenance schedules. It is designed to effectively manage and track maintenance equipment records within the system.",
+    "columns": [
+        {
+            "columnName": "maintenanceequipment_id",
+            "columnDescription": "Unique identifier for each maintenance equipment entry, serving as a distinct code or reference number for precise tracking and management of equipment records."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "Name of the maintenance equipment, providing clear identification and differentiation of each piece of equipment."
+        },
+        {
+            "columnName": "description",
+            "columnDescription": "Description of the maintenance equipment, summarizing its main features, functions, and intended use."
+        },
+        {
+            "columnName": "model",
+            "columnDescription": "Model of the maintenance equipment, detailing the specific version or type within its series for precise identification and reference."
+        },
+        {
+            "columnName": "manufacturer",
+            "columnDescription": "Manufacturer of the maintenance equipment, identifying the company or entity responsible for its production and quality assurance."
+        },
+        {
+            "columnName": "serialNumber",
+            "columnDescription": "Serial number of the maintenance equipment, serving as a unique identifier assigned by the manufacturer for tracking and verification purposes."
+        },
+        {
+            "columnName": "acquisitionDate",
+            "columnDescription": "Date when the maintenance equipment was acquired, indicating when it was obtained or put into service."
+        },
+        {
+            "columnName": "condition",
+            "columnDescription": "Current condition of the maintenance equipment, categorized into options such as Good, Fair, New, Poor, and Unknown, indicating its operational status and overall quality."
+        },
+        {
+            "columnName": "lastMaintenanceDate",
+            "columnDescription": "Date of the most recent maintenance performed on the maintenance equipment, providing a reference point for its latest service or inspection."
+        },
+        {
+            "columnName": "nextMaintenanceDate",
+            "columnDescription": "Scheduled date for the next maintenance of the equipment, indicating when the upcoming service or inspection is planned to occur."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "Index for tracking updates related to the maintenance equipment entries, allowing for systematic recording and monitoring of any changes or revisions made to the equipment records."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

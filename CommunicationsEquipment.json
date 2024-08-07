@@ -1,0 +1,51 @@
+{
+    "tableName": "CommunicationsEquipment",
+    "tableDescription": "This table provides detailed information about communications equipment, including its specifications, status, and maintenance history. It is designed to facilitate effective tracking, management, and upkeep of all communication-related devices.",
+    "columns": [
+        {
+            "columnName": "communicationsequipment_id",
+            "columnDescription": "A unique identifier for each piece of communications equipment. This distinct code or reference number ensures accurate tracking and management within the system."
+        },
+        {
+            "columnName": "name",
+            "columnDescription": "The name of the communications equipment, used for easy identification and differentiation between various types of equipment."
+        },
+        {
+            "columnName": "description",
+            "columnDescription": "A brief description of the communications equipment, summarizing its main features, functionalities, and intended use."
+        },
+        {
+            "columnName": "model",
+            "columnDescription": "The model of the communications equipment, specifying the particular version or type within its series for precise identification and reference."
+        },
+        {
+            "columnName": "manufacturer",
+            "columnDescription": "The name of the manufacturer of the communications equipment, identifying the company or entity responsible for its design, production, and quality assurance."
+        },
+        {
+            "columnName": "serialNumber",
+            "columnDescription": "The serial number assigned to the communications equipment by the manufacturer. This unique identifier is used for tracking, verification, and inventory management purposes."
+        },
+        {
+            "columnName": "acquisitionDate",
+            "columnDescription": "The date on which the communications equipment was acquired or brought into service. This date marks the beginning of its operational lifecycle."
+        },
+        {
+            "columnName": "condition",
+            "columnDescription": "The current condition of the communications equipment, categorized into: Good, Fair, New, Poor, and Unknown. These categories provide insight into the equipment’s operational state and overall quality."
+        },
+        {
+            "columnName": "lastMaintenanceDate",
+            "columnDescription": "The date of the most recent maintenance performed on the communications equipment, serving as a reference for the latest service or inspection."
+        },
+        {
+            "columnName": "nextMaintenanceDate",
+            "columnDescription": "The scheduled date for the next maintenance of the communications equipment, indicating when the upcoming service or inspection is planned to take place."
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates related to the communications equipment. This index allows for the systematic recording and monitoring of any changes or revisions made to the equipment’s details."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}

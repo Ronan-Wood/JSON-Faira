@@ -1,0 +1,35 @@
+{
+    "tableName": "GrenadeTraining",
+    "tableDescription": "This table contains detailed information about grenade training sessions, including member details, training completion, certification expiration, and status. It is designed to manage and track training records effectively.",
+    "columns": [
+        {
+            "columnName": "grenadetraining_id",
+            "columnDescription": "A unique identifier for each grenade training entry. This distinct code or reference number ensures precise tracking and management of training records."
+        },
+        {
+            "columnName": "member",
+            "columnDescription": "The name of the member undergoing grenade training. This column provides clear identification of the individual associated with the training record."
+        },
+        {
+            "columnName": "completedDate",
+            "columnDescription": "The date when the grenade training was completed, marking the official end date of the training session for the member."
+        },
+        {
+            "columnName": "expirationDate",
+            "columnDescription": "The expiration date of the grenade training certification, indicating when the member's certification will no longer be valid and will require renewal."
+        },
+        {
+            "columnName": "status",
+            "columnDescription": "The status of the grenade training, with possible values such as Complete, Incomplete, or other relevant statuses. This column provides insight into the training's current progress and overall completion level."
+        },
+        {
+            "columnName": "members_Fk",
+            "columnDescription": "A foreign key reference to the Members table, specifically linking to the `members_id` field. This column connects each grenade training entry to the corresponding member, ensuring relational integrity between training records and member details. (ref: Members.members_id)"
+        },
+        {
+            "columnName": "updated_idx",
+            "columnDescription": "An index for tracking updates related to grenade training entries. This column allows for systematic recording and monitoring of any changes or revisions made to the training records."
+        }
+    ],
+    "schemaName": "ingestion_test"
+}
