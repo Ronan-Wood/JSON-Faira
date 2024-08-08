@@ -161,7 +161,7 @@ August 7th JSON:
 
 Orignal JSON: Did not work. Provided a 2 column table (Member ID and Skill ID) and only provided the record IDs. Needs to display the the Names and the skills. ----> Bad
 
-August 7th JSON:
+August 7th JSON: Failed. Same as Above ----> Failed
 
 Notes: Response has been Recorded in the FairaResponse Text File.
 ---
@@ -175,7 +175,7 @@ Notes: Response has been Recorded in the FairaResponse Text File.
 ---
 ### Question 26: Who is the commander?
 
-Orignal: Failed to Find Information
+Orignal: Failed to Find Information ----> Failed
 
 August 7th JSON: 
 
@@ -191,7 +191,7 @@ Notes: Response has been Recorded in the FairaResponse Text File.
 ---
 ### Question 28: Who is Henry Miller's Supervisor?
 
-Orignal: Failed to Find Information
+Orignal: Failed to Find Information ----> Failed
 
 August 7th JSON: 
 
@@ -199,7 +199,7 @@ Notes: Response has been Recorded in the FairaResponse Text File.
 ---
 ### Question 29: What Skills does ethan Wilson have?
 
-Orignal: Failed to Find Information
+Orignal: Failed to Find Information ----> Failed
 
 August 7th JSON: 
 

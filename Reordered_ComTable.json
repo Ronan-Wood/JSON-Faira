@@ -1,6 +1,6 @@
 [
     {
-        "tableName": "AppointmentType",
+        "tableName": "AppointmentType", 
         "tableDescription": "This table provides detailed information about appointment types, outlining the various kinds of appointments that an airman might need to schedule. It includes data necessary for organizing and managing these appointments effectively.",
         "columns": [
             {
