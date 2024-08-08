@@ -1,5 +1,7 @@
 ### Updated Json Files for Faira
 
+## Current JSON Being Used: HybridFullTable
+
 ## Goal:
 - Improve the quiering abilty and interaction with Faria by improving the descriptions to make it easier for Faira to understand.
 
