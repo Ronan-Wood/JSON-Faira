@@ -1,0 +1,745 @@
+[
+    {
+        "tableName": "Requirements",
+        "tableDescription": "Table storing detailed information about various requirements members must fulfill, including their status and associations with appointment types and members.",
+        "columns": [
+            {
+                "columnName": "requirements_id",
+                "columnDescription": "Unique identifier for each requirement. Ensures precise tracking and management of requirement records."
+            },
+            {
+                "columnName": "requirements",
+                "columnDescription": "Descriptive label of the requirement. Identifies the specific training, certification, or task."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Current status of the requirement. Indicates if it is COMPLETE, INCOMPLETE, or in another relevant state."
+            },
+            {
+                "columnName": "isbooked",
+                "columnDescription": "Boolean value indicating if the requirement is booked. True means booked; false means not booked."
+            },
+            {
+                "columnName": "appointmenttype_Fk",
+                "columnDescription": "Foreign key referencing AppointmentType table. Links to appointmenttype_id, establishing the type of appointment associated with the requirement."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id, associating the requirement with the responsible member."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Systematically records and monitors changes to requirement entries."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Roles",
+        "tableDescription": "This table contains detailed information about organizational roles, including their titles, responsibilities, and access levels.",
+        "columns": [
+            {
+                "columnName": "roles_id",
+                "columnDescription": "Unique identifier for each role. Provides distinct reference for tracking role records."
+            },
+            {
+                "columnName": "roleTitle",
+                "columnDescription": "Title of the role. Specifies the designation or function assigned to a member, such as Airman, Commander, Health Provider, Training Provider, or Supervisor."
+            },
+            {
+                "columnName": "roleDescription",
+                "columnDescription": "Detailed description of the role's permissions and responsibilities. Outlines the specific actions, access levels, and oversight associated with the role."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Documents and monitors changes to role entries."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "RifleTraining",
+        "tableDescription": "This table contains information about rifle training programs undertaken by members. It includes training completion dates, certification status, and member associations.",
+        "columns": [
+            {
+                "columnName": "rifletraining_id",
+                "columnDescription": "Unique identifier for each rifle training entry. Ensures accurate tracking and management of training records."
+            },
+            {
+                "columnName": "member",
+                "columnDescription": "Full name of the member participating in the rifle training program. Identifies the individual undergoing training."
+            },
+            {
+                "columnName": "completedDate",
+                "columnDescription": "Date the member completed their rifle training. Marks the conclusion of the training session."
+            },
+            {
+                "columnName": "expirationDate",
+                "columnDescription": "Expiration date of the rifle training certification. Indicates when the certification becomes invalid and needs renewal."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Current status of the rifle training. Reflects training progress and completion level, such as Complete or Incomplete."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id, associating rifle training records with the specific member."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes to training records."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "AppointmentType",
+        "tableDescription": "This table provides detailed information about different types of appointments. It includes data necessary for organizing and managing appointments effectively.",
+        "columns": [
+            {
+                "columnName": "appointmenttype_id",
+                "columnDescription": "Unique identifier for each appointment type. Used to categorize and manage different types of appointments."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Name assigned to the appointment type. Helps in identifying and distinguishing between various appointment categories."
+            },
+            {
+                "columnName": "durationMinutes",
+                "columnDescription": "Duration of the appointment in minutes. Specifies total time allocated for the appointment."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes to appointment type information."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "VehicleEquipment",
+        "tableDescription": "This table contains detailed information about vehicle equipment, including identifiers, specifications, acquisition details, condition, and maintenance schedules.",
+        "columns": [
+            {
+                "columnName": "vehicleequipment_id",
+                "columnDescription": "Unique identifier for each piece of vehicle equipment. Ensures precise tracking and management of equipment records."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Name of the vehicle equipment. Provides clear identification of the equipment type."
+            },
+            {
+                "columnName": "description",
+                "columnDescription": "Detailed description of the equipment. Summarizes features, specifications, and intended use."
+            },
+            {
+                "columnName": "model",
+                "columnDescription": "Model of the equipment. Specifies exact designation or version of the vehicle equipment."
+            },
+            {
+                "columnName": "manufacturer",
+                "columnDescription": "Manufacturer of the equipment. Indicates the company responsible for producing the vehicle equipment."
+            },
+            {
+                "columnName": "serialnumber",
+                "columnDescription": "Serial number of the equipment. Unique identifier assigned by the manufacturer."
+            },
+            {
+                "columnName": "acquisitionDate",
+                "columnDescription": "Date the equipment was acquired. Marks when it was obtained."
+            },
+            {
+                "columnName": "condition",
+                "columnDescription": "Current condition of the equipment. Categorized as New, Good, Fair, Needs Repair, etc."
+            },
+            {
+                "columnName": "lastMaintenanceDate",
+                "columnDescription": "Date of the last maintenance. Most recent inspection or service performed."
+            },
+            {
+                "columnName": "nextMaintenanceDate",
+                "columnDescription": "Date of the next scheduled maintenance. Indicates when the next service or inspection is planned."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes or modifications made to equipment entries."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "M249Training",
+        "tableDescription": "This table contains detailed information about M249 training sessions, including member details, completion dates, certification expiration dates, and current status.",
+        "columns": [
+            {
+                "columnName": "m249Training_id",
+                "columnDescription": "Unique identifier for each M249 training entry. Ensures precise tracking and management of training records."
+            },
+            {
+                "columnName": "member",
+                "columnDescription": "Name of the member undergoing M249 training. Provides clear identification of the individual associated with the training record."
+            },
+            {
+                "columnName": "completedDate",
+                "columnDescription": "Date on which the M249 training was completed. Marks the official end date of the training session."
+            },
+            {
+                "columnName": "expirationDate",
+                "columnDescription": "Expiration date of the M249 training certification. Indicates when the certification will require renewal."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Current status of the M249 training. Indicates the progress and overall completion level (e.g., Complete, Incomplete)."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id, associating the M249 training entry with the corresponding member."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes or revisions made to training records."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Slots",
+        "tableDescription": "This table contains information about available slots for appointments. It details scheduling, capacity, and booking status.",
+        "columns": [
+            {
+                "columnName": "slots_id",
+                "columnDescription": "Unique identifier for each slot. Ensures precise tracking and management of slot records."
+            },
+            {
+                "columnName": "slotId",
+                "columnDescription": "Primary key in Airtable. Guarantees distinct referencing and access to each slot entry."
+            },
+            {
+                "columnName": "startTime",
+                "columnDescription": "Start time of the slot. Indicates when the appointment or activity begins."
+            },
+            {
+                "columnName": "endTime",
+                "columnDescription": "End time of the slot. Indicates when the appointment or activity ends."
+            },
+            {
+                "columnName": "slotcapacity",
+                "columnDescription": "Maximum capacity for the slot. Specifies the total number of individuals permitted to book the slot."
+            },
+            {
+                "columnName": "slotused",
+                "columnDescription": "Current occupancy of the slot. Indicates the number of individuals who have booked the slot."
+            },
+            {
+                "columnName": "isbooked",
+                "columnDescription": "Booking status of the slot. Boolean value (1 for booked, 0 for available)."
+            },
+            {
+                "columnName": "appointmenttype_Fk",
+                "columnDescription": "Foreign key referencing AppointmentType table. Links to appointmenttype_id, associating each slot with the specific type of appointment."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id, associating each slot with the member who has booked or is eligible to book it."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes or modifications made to slot entries."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "MaintenanceEquipment",
+        "tableDescription": "This table contains detailed information about maintenance equipment. It includes identifiers, specifications, acquisition details, condition, and maintenance schedules.",
+        "columns": [
+            {
+                "columnName": "maintenanceequipment_id",
+                "columnDescription": "Unique identifier for each maintenance equipment entry. Ensures precise tracking and management of equipment records."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Name of the maintenance equipment. Identifies and differentiates each piece of equipment."
+            },
+            {
+                "columnName": "description",
+                "columnDescription": "Description of the maintenance equipment. Summarizes features, functions, and intended use."
+            },
+            {
+                "columnName": "model",
+                "columnDescription": "Model of the maintenance equipment. Details specific version or type within its series."
+            },
+            {
+                "columnName": "manufacturer",
+                "columnDescription": "Manufacturer of the maintenance equipment. Identifies the company responsible for its production."
+            },
+            {
+                "columnName": "serialNumber",
+                "columnDescription": "Serial number of the maintenance equipment. Unique identifier assigned by the manufacturer."
+            },
+            {
+                "columnName": "acquisitionDate",
+                "columnDescription": "Date the maintenance equipment was acquired. Indicates when it was obtained or put into service."
+            },
+            {
+                "columnName": "condition",
+                "columnDescription": "Current condition of the maintenance equipment. Categorized as Good, Fair, New, Poor, or Unknown."
+            },
+            {
+                "columnName": "lastMaintenanceDate",
+                "columnDescription": "Date of the most recent maintenance. Reference point for its latest service or inspection."
+            },
+            {
+                "columnName": "nextMaintenanceDate",
+                "columnDescription": "Scheduled date for the next maintenance. Indicates when the next service or inspection is planned."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes or revisions made to equipment entries."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "GrenadeTraining",
+        "tableDescription": "This table contains detailed information about grenade training sessions. It includes member details, training completion, certification expiration, and status.",
+        "columns": [
+            {
+                "columnName": "grenadetraining_id",
+                "columnDescription": "Unique identifier for each grenade training entry. Ensures precise tracking and management of training records."
+            },
+            {
+                "columnName": "member",
+                "columnDescription": "Name of the member undergoing grenade training. Provides clear identification of the individual associated with the training record."
+            },
+            {
+                "columnName": "completedDate",
+                "columnDescription": "Date when the grenade training was completed. Marks the official end date of the training session."
+            },
+            {
+                "columnName": "expirationDate",
+                "columnDescription": "Expiration date of the grenade training certification. Indicates when the certification needs renewal."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Status of the grenade training. Values include Complete, Incomplete, or other relevant statuses."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id, associating grenade training entry with the corresponding member."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates. Records and monitors changes or revisions made to training records."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "AircraftEquipment",
+        "tableDescription": "Comprehensive details about aircraft equipment, including model, manufacturer, serial number, acquisition date, condition, and maintenance schedule.",
+        "columns": [
+            {
+                "columnName": "aircraftequipment_id",
+                "columnDescription": "Unique identifier for the aircraft equipment. Ensures precise tracking and identification within maintenance records and operational logs."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Official name of the aircraft equipment. Used for identification and reference."
+            },
+            {
+                "columnName": "description",
+                "columnDescription": "Brief description of the aircraft equipment. Summarizes key features and functions."
+            },
+            {
+                "columnName": "model",
+                "columnDescription": "Model of the aircraft equipment. Details the specific version or type within its series."
+            },
+            {
+                "columnName": "manufacturer",
+                "columnDescription": "Manufacturer of the aircraft equipment. Identifies the company responsible for its production."
+            },
+            {
+                "columnName": "serialNumber",
+                "columnDescription": "Serial number of the aircraft equipment. Unique identifier assigned by the manufacturer for tracking and verification."
+            },
+            {
+                "columnName": "acquisitionDate",
+                "columnDescription": "Date the aircraft equipment was acquired. Indicates when it was obtained or put into service."
+            },
+            {
+                "columnName": "condition",
+                "columnDescription": "Current condition of the aircraft equipment. Categorized as Good, Fair, New, Poor, or Unknown."
+            },
+            {
+                "columnName": "lastMaintenanceDate",
+                "columnDescription": "Date of the last maintenance performed on the aircraft equipment. Reference point for its most recent service or inspection."
+            },
+            {
+                "columnName": "nextMaintenanceDate",
+                "columnDescription": "Scheduled date for the next maintenance of the aircraft equipment. Indicates when the upcoming service or inspection is planned."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates to the aircraft equipment information. Records and monitors changes or revisions."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Members",
+        "tableDescription": "Comprehensive information about members, ensuring effective management and tracking of member records.",
+        "columns": [
+            {
+                "columnName": "members_id",
+                "columnDescription": "Unique identifier for each member. Facilitates precise tracking and management of records while ensuring data integrity across related tables."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Full name of the member. Provides clear identification and facilitates effective communication across various contexts."
+            },
+            {
+                "columnName": "dodid",
+                "columnDescription": "Department of Defense Identification Number (DOD ID). Unique identifier for official identification and record-keeping within the Department of Defense."
+            },
+            {
+                "columnName": "homePhone",
+                "columnDescription": "Home phone number. Enables direct communication with the member outside official channels."
+            },
+            {
+                "columnName": "ssn",
+                "columnDescription": "Social Security Number. Uniquely identifies the member for administrative purposes and tracking benefits."
+            },
+            {
+                "columnName": "dateOfBirth",
+                "columnDescription": "Date of birth formatted as MM/DD/YYYY. Used for age verification and eligibility assessments."
+            },
+            {
+                "columnName": "dateArrivedAtStation",
+                "columnDescription": "Date the member arrived at their current duty station, formatted as MM/DD/YYYY. Used for tracking service duration."
+            },
+            {
+                "columnName": "age",
+                "columnDescription": "Calculated age of the member. Provides a quick reference for age-related eligibility."
+            },
+            {
+                "columnName": "personalEmail",
+                "columnDescription": "Personal email address. For direct contact outside official channels."
+            },
+            {
+                "columnName": "militaryEmail",
+                "columnDescription": "Official military email address. For secure communications."
+            },
+            {
+                "columnName": "homeAddress",
+                "columnDescription": "Residential address for correspondence and administrative purposes."
+            },
+            {
+                "columnName": "gender",
+                "columnDescription": "Classification of the member's gender identity for demographic records."
+            },
+            {
+                "columnName": "personalTagline",
+                "columnDescription": "Brief phrase reflecting the member's personal philosophy or outlook."
+            },
+            {
+                "columnName": "jobtitle",
+                "columnDescription": "Official job title indicating the member's position within the organization."
+            },
+            {
+                "columnName": "awsS3Link",
+                "columnDescription": "Direct URL to the member's profile image hosted on Amazon S3 for easy access."
+            },
+            {
+                "columnName": "completeGlideMemberUrl",
+                "columnDescription": "Direct link to the member's profile on Glide for quick access to detailed information."
+            },
+            {
+                "columnName": "readinessScore",
+                "columnDescription": "Readiness score from 0 to 100. Indicates the member's overall readiness based on completed and incomplete requirements."
+            },
+            {
+                "columnName": "hasconflict",
+                "columnDescription": "Indicates scheduling conflicts. Represented as 0 for no conflict and 1 for conflict."
+            },
+            {
+                "columnName": "roles_Fk",
+                "columnDescription": "Foreign key referencing Roles table. Links to roles_id to associate the member with their role. (ref: Roles.roles_id)"
+            },
+            {
+                "columnName": "jobs_Fk",
+                "columnDescription": "Foreign key referencing Jobs table. Links to jobs_id to associate the member with their job. (ref: Jobs.jobs_id)"
+            },
+            {
+                "columnName": "groups_Fk",
+                "columnDescription": "Foreign key referencing Groups table. Links to groups_id to associate the member with their group. (ref: Groups.groups_id)"
+            },
+            {
+                "columnName": "squadrons_Fk",
+                "columnDescription": "Foreign key referencing Squadrons table. Links to squadrons_id to accurately associate the member with their squadron. (ref: Squadrons.squadrons_id)"
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to member entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "M4Training",
+        "tableDescription": "Comprehensive information about M4 training sessions, including member details, completion dates, certification expiration, status, and updates.",
+        "columns": [
+            {
+                "columnName": "m4Training_id",
+                "columnDescription": "Unique identifier for each M4 training entry. Ensures precise tracking and management of individual training records."
+            },
+            {
+                "columnName": "member",
+                "columnDescription": "Name of the member undergoing M4 training. Provides clear identification and accurate record-keeping."
+            },
+            {
+                "columnName": "completedDate",
+                "columnDescription": "Date the M4 training was completed. Marks the official end of the training session for the member."
+            },
+            {
+                "columnName": "expirationDate",
+                "columnDescription": "Expiration date of the M4 training certification. Indicates the deadline for the member to renew their certification."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Current status of the M4 training. Predefined options such as Complete or Incomplete provide insight into the training's progress."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id to associate each M4 training entry with the corresponding member. (ref: Members.members_id)"
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to M4 training entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "M240Training",
+        "tableDescription": "Comprehensive information about M240 training sessions, including member details, completion dates, certification expiration, status, and updates.",
+        "columns": [
+            {
+                "columnName": "m240Training_id",
+                "columnDescription": "Unique identifier for each M240 training entry. Ensures precise tracking and management of training records."
+            },
+            {
+                "columnName": "member",
+                "columnDescription": "Name of the member undergoing M240 training. Provides clear identification and accurate record-keeping."
+            },
+            {
+                "columnName": "completedDate",
+                "columnDescription": "Date the M240 training was completed. Marks the official end of the training session for the member."
+            },
+            {
+                "columnName": "expirationDate",
+                "columnDescription": "Expiration date of the M240 training certification. Indicates the deadline for the member to renew their certification."
+            },
+            {
+                "columnName": "status",
+                "columnDescription": "Current status of the M240 training. Predefined options such as Complete or Incomplete provide insight into the training's progress."
+            },
+            {
+                "columnName": "members_Fk",
+                "columnDescription": "Foreign key referencing Members table. Links to members_id to associate each M240 training entry with the corresponding member. (ref: Members.members_id)"
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to M240 training entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Groups",
+        "tableDescription": "Detailed information about groups, including unique identifiers, names, supervisors, readiness status, and associated images.",
+        "columns": [
+            {
+                "columnName": "groups_id",
+                "columnDescription": "Unique identifier for each group entry. Ensures precise tracking and management of group records."
+            },
+            {
+                "columnName": "group",
+                "columnDescription": "Name of the group. Provides a clear label for identifying and differentiating various groups."
+            },
+            {
+                "columnName": "supervisorName",
+                "columnDescription": "Name of the group's supervisor. Identifies the individual responsible for overseeing and managing the group's activities."
+            },
+            {
+                "columnName": "groupReadinessStatus",
+                "columnDescription": "Readiness status of the group. Categorized into Green, Red, Yellow, or other statuses based on the group's preparedness and operational capability."
+            },
+            {
+                "columnName": "imageUrl",
+                "columnDescription": "URL of the group's image. Provides a link to an image associated with the group for visual identification."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to group entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "CommunicationsEquipment",
+        "tableDescription": "Detailed information about communications equipment, including specifications, status, and maintenance history.",
+        "columns": [
+            {
+                "columnName": "communicationsequipment_id",
+                "columnDescription": "Unique identifier for each piece of communications equipment. Ensures accurate tracking and management within the system."
+            },
+            {
+                "columnName": "name",
+                "columnDescription": "Name of the communications equipment. Used for easy identification and differentiation between various types of equipment."
+            },
+            {
+                "columnName": "description",
+                "columnDescription": "Brief description of the communications equipment. Summarizes main features, functionalities, and intended use."
+            },
+            {
+                "columnName": "model",
+                "columnDescription": "Model of the communications equipment. Specifies the particular version or type within its series."
+            },
+            {
+                "columnName": "manufacturer",
+                "columnDescription": "Name of the manufacturer of the communications equipment. Identifies the company responsible for its design and production."
+            },
+            {
+                "columnName": "serialNumber",
+                "columnDescription": "Serial number assigned to the communications equipment by the manufacturer. Used for tracking and inventory management."
+            },
+            {
+                "columnName": "acquisitionDate",
+                "columnDescription": "Date the communications equipment was acquired. Marks the beginning of its operational lifecycle."
+            },
+            {
+                "columnName": "condition",
+                "columnDescription": "Current condition of the communications equipment. Categorized as Good, Fair, New, Poor, or Unknown."
+            },
+            {
+                "columnName": "lastMaintenanceDate",
+                "columnDescription": "Date of the most recent maintenance performed on the communications equipment. Reference point for its latest service or inspection."
+            },
+            {
+                "columnName": "nextMaintenanceDate",
+                "columnDescription": "Scheduled date for the next maintenance of the communications equipment. Indicates when the upcoming service or inspection is planned."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to communications equipment. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Members_Skills",
+        "tableDescription": "Junction table establishing a many-to-many relationship between members and their associated skills.",
+        "columns": [
+            {
+                "columnName": "members_id",
+                "columnDescription": "Foreign key referencing Members table. Links to Members_id to accurately associate the member with their skills. (Foreign Key to Members.Members_id, ID of the member)",
+                "isPrimaryKey": true
+            },
+            {
+                "columnName": "skills_id",
+                "columnDescription": "Foreign key referencing Skills table. Links to Skills_id to accurately associate the skill with the corresponding member entry. (Foreign Key to Skills.Skills_id, ID of the skill)",
+                "isPrimaryKey": true
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Skills",
+        "tableDescription": "Comprehensive information about skills necessary for various roles within the organization.",
+        "columns": [
+            {
+                "columnName": "skills_id",
+                "columnDescription": "Unique identifier for each skill entry. Ensures accurate tracking and effective management of skill records."
+            },
+            {
+                "columnName": "skill",
+                "columnDescription": "Name of the skill. Provides clear identification of the specific expertise or competency required for a member's role, such as Aerospace Engineer, Aircraft Mechanic, or Air Traffic Controller."
+            },
+            {
+                "columnName": "source",
+                "columnDescription": "Source of the skill. Indicates the origin of the skill acquisition, whether obtained through civilian or military training."
+            },
+            {
+                "columnName": "type",
+                "columnDescription": "Type of credential or training associated with the skill. Specifies the nature of the qualification received, such as Certification, Education, Letter of Designation, License, or Training."
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates to skill entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Jobs",
+        "tableDescription": "Detailed information about job positions, including unique identifiers, titles, responsibilities, and associated squadrons.",
+        "columns": [
+            {
+                "columnName": "jobs_id",
+                "columnDescription": "Unique identifier for each job entry. Ensures precise tracking and management of job records."
+            },
+            {
+                "columnName": "jobTitle",
+                "columnDescription": "Title of the job. Provides a clear and concise label for identifying and differentiating various job positions."
+            },
+            {
+                "columnName": "description",
+                "columnDescription": "Detailed description of the job's responsibilities and duties. Outlines specific tasks, functions, and roles associated with the position."
+            },
+            {
+                "columnName": "squadrons_Fk",
+                "columnDescription": "Foreign key referencing Squadrons table. Links to squadrons_id to associate each job entry with a corresponding squadron. (ref: Squadrons.squadrons_id)"
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates related to job entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    },
+    {
+        "tableName": "Squadrons",
+        "tableDescription": "Comprehensive information about squadrons within the organization, detailing their operational structure and status.",
+        "columns": [
+            {
+                "columnName": "squadrons_id",
+                "columnDescription": "Unique identifier for each squadron. Ensures precise tracking and management of squadron records."
+            },
+            {
+                "columnName": "squadron",
+                "columnDescription": "Name of the squadron. Provides a distinct designation that identifies the unit within the larger organization."
+            },
+            {
+                "columnName": "supervisorName",
+                "columnDescription": "Name of the squadron's supervisor. Indicates the individual responsible for overseeing the squadron's operations and personnel."
+            },
+            {
+                "columnName": "squadronReadinessStatus",
+                "columnDescription": "Readiness status of the squadron. Indicates the overall operational readiness level represented by color codes (Red, Yellow, Green), based on the completion status of requirements for all personnel."
+            },
+            {
+                "columnName": "imageUrl",
+                "columnDescription": "URL to the squadron's image. Provides a direct link to a visual representation of the squadron."
+            },
+            {
+                "columnName": "groups_Fk",
+                "columnDescription": "Foreign key referencing Groups table. Links to groups_id to associate each squadron with the specific group it belongs to. (ref: Groups.groups_id)"
+            },
+            {
+                "columnName": "updated_idx",
+                "columnDescription": "Index for tracking updates to squadron entries. Records and monitors changes systematically."
+            }
+        ],
+        "schemaName": "ingestion_test"
+    }
+]
