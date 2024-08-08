@@ -1,10 +1,31 @@
+Question #19:
+
+- OG Example: Provided the Cards (Cannot Copy and Paste that)
+
+- August 7th JSON:
+    We're currently facing technical issues retrieving the personnel data for individuals trained with the M249 SAW. I recommend attempting the following steps to resolve this:
+
+        Report the Issue: Please inform your IT support team about the ongoing data retrieval issue.
+        Verify Access: Ensure that you have the necessary permissions and access rights to query this particular dataset.
+        Retry Later: There might be a temporary glitch or server downtime. Trying again after some time might resolve the issue.
+
+    If there are specific names or member IDs you need information for, please provide them, and I can attempt to fetch specific data accordingly. Thank you for your understanding.
+
+- August 8th, JSON: Provided the Cards
+
+---------
+
 Question #24:
 
 - OG Example: (only 1 rec in this doc all worked though.)
     Member ID           Skill ID
 reccCkytUxSlClXfq	recFoEk8DWDTAoz10
 
-- August 7th JSON:
+- Hybrid:
+    Members and Their Skills
+       Member Name	      Skill
+    Aubrey Johnson	Intelligence Analyst
+    Anthony Anderson	Research Scientist  
 
 ---------
 
@@ -15,6 +36,16 @@ Question #25:
     Would you like to search for relevant documents or specify how to retrieve data?
 
 - August 7th JSON:
+    Grace Johnson is the direct supervisor for the 73rd Airlift Squadron.
+
+- August 8th JSON:
+    It seems there are some issues fetching the skills data from the database. Let me try another approach to get the information............................................................................................................Here are the skills of the members of the 73rd Airlift Squadron:
+            Name	  Job Title	     Skill
+        Grace Johnson	Pilot	Aircraft Mechanic
+        Joseph Williams	Pilot	Logistics Coordinator
+
+- Hybrid:
+    It appears there is a recurring issue when trying to retrieve data related to Grace Johnson's direct reports.
 
 ---------
 
@@ -24,6 +55,10 @@ Question #26:
     Would you like to search for relevant documents to find this information?
 
 - August 7th JSON:
+    The commander is Ethan Wilson.
+
+- Hybrid:
+    The commander is Ethan Wilson.
 
 ----------
 
@@ -36,6 +71,16 @@ Question #27:
     73rd Airlift Squadron	            Grace Johnson
 
 - August 7th JSON:
+            Squadron:                    Supervisor:
+    932nd Maintenance Squadron	        Christopher Davis
+    932nd Aerospace Medicine Squadron	Henry Johnson
+    73rd Airlift Squadron	            Grace Johnson
+
+- August 8th JSON:
+            Squadron:                    Supervisor:
+    932nd Maintenance Squadron	        Christopher Davis
+    932nd Aerospace Medicine Squadron	Henry Johnson
+    73rd Airlift Squadron	            Grace Johnson
 
 ----------
 
@@ -46,6 +91,10 @@ Question #28:
     If you have any other questions or need assistance with something else in the meantime, feel free to let me know!
 
 - August 7th JSON:
+    Henry Miller's supervisor is Emily Smith.
+
+- August 8th JSON
+    I encountered an issue retrieving the data for Henry Miller's supervisor. Let me try again..................................Henry Miller's supervisor is Emily Smith.
 
 ----------
 
@@ -56,3 +105,16 @@ Question #29:
     Would you like to search for relevant documents to find this information, or specify any additional data sources that might assist in retrieving the required information?
 
 - August 7th JSON:
+    Ethan Wilson has the following skill:
+        Skill	            Type	    Source
+    Aerospace Engineer	Certification	Civilian
+
+- August 8th JSON: (Did variations of this)
+    Ethan Wilson has the following skills:
+        Aerospace Engineer
+
+- Hybrid JSON:
+    Ethan Wilson has the following skill:
+            Skill: Aerospace Engineer
+            Source: Civilian
+            Type: Certification
