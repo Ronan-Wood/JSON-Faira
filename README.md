@@ -85,7 +85,7 @@ Notes: The issues with this prompt come from the question not the data.
 
   Orignal JSON: Worked Well. Provided a 2 column table of the mission type and the Description of it. ----> Good
   
-  ComTable Worked Well. Provided a 2 column table of the mission type and the Description of it. ----> Good
+  ComTable: Worked Well. Provided a 2 column table of the mission type and the Description of it. ----> Good
 
   EnchancedFullTable: Worked Well. Provided a 2 column table of the mission type and the Description of it. ----> Good
 
